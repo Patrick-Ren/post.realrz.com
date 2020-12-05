@@ -1148,6 +1148,19 @@
   resolved "https://registry.yarnpkg.com/@csstools/normalize.css/-/normalize.css-10.1.0.tgz#f0950bba18819512d42f7197e56c518aa491cf18"
   integrity sha512-ij4wRiunFfaJxjB0BdrYHIH8FxBJpOwNPhhAcunlmPdXudL1WQV1qoP9un6JsEBAgQH+7UXyyjh0g7jTxXK6tg==
 
+"@editorjs/editorjs@^2.19.0":
+  version "2.19.0"
+  resolved "https://registry.npm.taobao.org/@editorjs/editorjs/download/@editorjs/editorjs-2.19.0.tgz#ac98f7b1e627c89b51c4430f6aa325e873ade7fc"
+  integrity sha1-rJj3seYnyJtRxEMPaqMl6HOt5/w=
+  dependencies:
+    codex-notifier "^1.1.2"
+    codex-tooltip "^1.0.1"
+
+"@editorjs/paragraph@^2.8.0":
+  version "2.8.0"
+  resolved "https://registry.npm.taobao.org/@editorjs/paragraph/download/@editorjs/paragraph-2.8.0.tgz#11cc381fcafaf8b9160517ce65d59eee93fc4af9"
+  integrity sha1-Ecw4H8r6+LkWBRfOZdWe7pP8Svk=
+
 "@emotion/hash@^0.8.0":
   version "0.8.0"
   resolved "https://registry.npm.taobao.org/@emotion/hash/download/@emotion/hash-0.8.0.tgz#bbbff68978fefdbe68ccb533bc8cbe1d1afb5413"
@@ -1406,10 +1419,10 @@
     react-is "^16.8.0"
     react-transition-group "^4.4.0"
 
-"@material-ui/icons@^4.9.1":
-  version "4.9.1"
-  resolved "https://registry.npm.taobao.org/@material-ui/icons/download/@material-ui/icons-4.9.1.tgz#fdeadf8cb3d89208945b33dbc50c7c616d0bd665"
-  integrity sha1-/erfjLPYkgiUWzPbxQx8YW0L1mU=
+"@material-ui/icons@^4.11.2":
+  version "4.11.2"
+  resolved "https://registry.npm.taobao.org/@material-ui/icons/download/@material-ui/icons-4.11.2.tgz#b3a7353266519cd743b6461ae9fdfcb1b25eb4c5"
+  integrity sha1-s6c1MmZRnNdDtkYa6f38sbJetMU=
   dependencies:
     "@babel/runtime" "^7.4.4"
 
@@ -3340,6 +3353,16 @@ coa@^2.0.2:
     "@types/q" "^1.5.1"
     chalk "^2.4.1"
     q "^1.1.2"
+
+codex-notifier@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.npm.taobao.org/codex-notifier/download/codex-notifier-1.1.2.tgz#a733079185f4c927fa296f1d71eb8753fe080895"
+  integrity sha1-pzMHkYX0ySf6KW8dceuHU/4ICJU=
+
+codex-tooltip@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.npm.taobao.org/codex-tooltip/download/codex-tooltip-1.0.1.tgz#f6e4f39d81507f9c455b667f1287746d14ee8056"
+  integrity sha1-9uTznYFQf5xFW2Z/Eod0bRTugFY=
 
 collect-v8-coverage@^1.0.0:
   version "1.0.1"
@@ -9192,6 +9215,11 @@ react-dom@^17.0.1:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
     scheduler "^0.20.1"
+
+react-editor-js@^1.7.0:
+  version "1.7.0"
+  resolved "https://registry.npm.taobao.org/react-editor-js/download/react-editor-js-1.7.0.tgz#60a3192b97d1ffd8d438dd1230ca75adbf7aa7de"
+  integrity sha1-YKMZK5fR/9jUON0SMMp1rb96p94=
 
 react-error-overlay@^6.0.8:
   version "6.0.8"

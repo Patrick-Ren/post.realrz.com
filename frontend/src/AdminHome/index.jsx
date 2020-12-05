@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-// import callApi, { ErrorHappened } from "../utils/callApi";
+import callApi, { ErrorHappened } from "../utils/callApi";
 import Login from "./login";
+import Posts from "./posts";
 
 const AdminHome = () => {
   const [authenticated, setAuthenticated] = useState(false);
@@ -12,15 +13,11 @@ const AdminHome = () => {
   }, []);
 
   function authenticate(authKey) {
-    setTimeout(() => {
+    callApi(`auth`, "post", { key: authKey }, "密码错误").then((res) => {
+      if (res === ErrorHappened) return;
       setAuthenticated(true);
       localStorage.setItem("auth-key", authKey);
-    }, [1200]);
-    // callApi(`auth?key=${authKey}`, "get", "admin验证").then((res) => {
-    //   if (res === ErrorHappened) return;
-    //   setAuthenticated(true);
-    //   localStorage.setItem("auth-key", authKey);
-    // });
+    });
   }
 
   if (!authenticated) {
@@ -34,7 +31,7 @@ const AdminHome = () => {
     );
   }
 
-  return <div>This is Admin Home Page</div>;
+  return <Posts />;
 };
 
 export default AdminHome;

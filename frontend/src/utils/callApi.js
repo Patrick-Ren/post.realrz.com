@@ -2,18 +2,14 @@ import Axios from "axios";
 
 const ErrorHappened = "ERROR HAPPENED";
 
-Axios.defaults.baseURL = "http://api.realrz.com";
+// Axios.defaults.baseURL = "http://api.realrz.com";
+// Axios.defaults.baseURL = "http://localhost:3000";
 
 // 对 Axios 进行封装，添加异常处理逻辑, 并在请求失败时向用户提示
 // 返回一个一定会 resolve 的 promise
 // 请求成功时，resolve 为数据
 // 请求失败时，resolve 为常量 ErrorHappened
-async function CallApi(
-  endpoint,
-  method = "get",
-  resourceName = "",
-  params = {}
-) {
+async function CallApi(endpoint, method = "get", params = {}, errMsg = "") {
   function notifyError() {
     // notification.error({
     //   message: "网络错误",
@@ -21,11 +17,7 @@ async function CallApi(
     //     ? `无法${method === "get" ? "获取" : "设置"}${resourceName}`
     //     : null,
     // });
-    alert(
-      resourceName
-        ? `无法${method === "get" ? "获取" : "设置"}${resourceName}`
-        : "网络错误"
-    );
+    alert(errMsg || "网络错误");
   }
   // await 后面的 promise 被 reject 的话会向外抛异常
   // 如果不用 try catch 处理会造成程序崩溃
@@ -47,7 +39,7 @@ async function CallApi(
       return ErrorHappened;
     }
   } catch (err) {
-    console.error(err);
+    // console.error(err); don't log the error since xhr.js will log the error by default
     notifyError();
     return ErrorHappened;
   }

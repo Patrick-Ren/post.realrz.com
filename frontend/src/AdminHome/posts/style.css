@@ -1,0 +1,12 @@
+.table-head th {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.table-body tr:nth-child(2n) {
+  background-color: #f5f5f5;
+}
+
+.table-body td {
+  font-size: 16px;
+}
